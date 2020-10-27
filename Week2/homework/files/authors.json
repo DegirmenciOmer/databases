@@ -1,0 +1,26 @@
+[
+    {
+        "author_no": "110",
+        "author_name": "Stephen King",
+        "university": "Maastricht University",
+        "date_of_birth": "1952-01-01",
+        "h_index": 300,
+        "gender": "m"
+    },
+    {
+        "author_no": "111",
+        "author_name": "Ernest Hemingway",
+        "university": "London University",
+        "date_of_birth": "1899-11-12",
+        "h_index": 300,
+        "gender": "m"
+    },
+    {
+        "author_no": "112",
+        "author_name": "Harper Lee",
+        "university": "Princeton Universit",
+        "date_of_birth": "1926-01-19",
+        "h_index": 244,
+        "gender": "f"
+    }
+]
