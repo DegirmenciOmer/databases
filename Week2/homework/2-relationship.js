@@ -42,8 +42,14 @@ CREATE TABLE IF NOT EXISTS research_papers(
     `;
     try {
         await Promise.all[executeQuery(research_papers_TABLE), executeQuery(authors_and_papers_TABLE)];
-        const data = await readFile(__dirname + '/files/papers.json', 'utf8');
-        const researchPapers = JSON.parse(data);
+
+        const paperData = await readFile(__dirname + '/files/papers.json', 'utf8');
+        const researchPapers = JSON.parse(paperData);
+
+        const authPaperData = await readFile(__dirname + '/files/authors_papers.json', 'utf8');
+        const authors_papers = JSON.parse(authPaperData);
+
+        console.log(researchPapers, authPaperData);
 
         for (let i = 0; i < research_papers_TABLE.length; i++) {
             connection.query('INSERT INTO research_papers SET ?', researchPapers[i], error => {
@@ -52,6 +58,17 @@ CREATE TABLE IF NOT EXISTS research_papers(
                 }
             });
         }
+
+        
+        for (let i = 0; i < authors_and_papers_TABLE.length; i++) {
+            connection.query('INSERT INTO authors_and_papers SET ?', authors_papers[i], error => {
+                if (error) {
+                    throw error;
+                }
+            });
+        }
+
+
         connection.end();
 
     } catch (err) {
