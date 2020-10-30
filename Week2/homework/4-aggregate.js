@@ -3,7 +3,7 @@ const connection = mysql.createConnection({
 host: 'localhost',
     user: 'hyfuser',
     password: 'hyfpassword',
-    database: 'userdb'
+    database: 'week2_db'
 });
 connection.connect();
 
@@ -14,7 +14,7 @@ function queryConnection(queryName) {
     });
 }
 
-const query11 = 
+const query1 = 
 `
 SELECT 
     rp.paper_title, count(a.author_no) AS total_author
@@ -26,10 +26,10 @@ JOIN authors a
 GROUP BY paper_title;
 `;
 
-queryConnection(query11);
+queryConnection(query1);
 
 
-const query22 = 
+const query2 = 
 `
 SELECT 
     count(ap.paper_id) AS total_paper_by_females
@@ -38,19 +38,19 @@ JOIN authors_papers ap
 USING(author_no)
 WHERE a.gender = 'f';
 `;
-queryConnection(query22);
+queryConnection(query2);
 
 
-const query33 = 
+const query3 = 
 `
 SELECT 
 university, avg(h_index) as avarage_h_index
 FROM authors
 GROUP BY university;
-`
-queryConnection(query33);
+`;
+queryConnection(query3);
 
-const query44 = 
+const query4 = 
 `
 SELECT 
 a. university, count(ap.paper_id) AS total_papers_per_uni
@@ -60,11 +60,11 @@ JOIN authors_papers ap
 JOIN research_papers rp
 	USING(paper_id)
 GROUP BY a.university;
-`
-queryConnection(query44);
+`;
+queryConnection(query4);
 
 
-const query55 = 
+const query5 = 
 `
 SELECT 
 a. university, min(a.h_index) AS min_h_index, max(a.h_index) AS max_h_index
@@ -74,7 +74,7 @@ JOIN authors_papers ap
 JOIN research_papers rp
 	ON rp.paper_id = ap.paper_id
 GROUP BY a.university;
-`
-queryConnection(query55);
+`;
+queryConnection(query5);
 
 connection.end();

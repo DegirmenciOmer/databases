@@ -1,9 +1,79 @@
 [
     {
-        "author_no": "110",
-        "author_name": "Stephen King",
-        "university": "Maastricht University",
+        "author_no": "101",
+        "author_name": "Ed Sheeran",
+        "university": "Dallas University",
         "date_of_birth": "1952-01-01",
+        "h_index": 300,
+        "gender": "m"
+    },
+    {
+        "author_no": "102",
+        "author_name": "O Henry",
+        "university": "London University",
+        "date_of_birth": "1899-11-12",
+        "h_index": 300,
+        "gender": "m"
+    },
+    {
+        "author_no": "103",
+        "author_name": "Christopher Robins",
+        "university": "Yale University",
+        "date_of_birth": "1926-01-19",
+        "h_index": 244,
+        "gender": "f"
+    },{
+        "author_no": "104",
+        "author_name": "Charlie Chaplin",
+        "university": "Athens University",
+        "date_of_birth": "1952-01-01",
+        "h_index": 300,
+        "gender": "m"
+    },
+    {
+        "author_no": "105",
+        "author_name": "Donald Trump",
+        "university": "London University",
+        "date_of_birth": "1899-11-12",
+        "h_index": 300,
+        "gender": "m"
+    },
+    {
+        "author_no": "106",
+        "author_name": "William Shakespeare",
+        "university": "London Universit",
+        "date_of_birth": "1226-01-19",
+        "h_index": 244,
+        "gender": "f"
+    },{
+        "author_no": "107",
+        "author_name": "Agatha Christie",
+        "university": "Paris University",
+        "date_of_birth": "1852-01-01",
+        "h_index": 300,
+        "gender": "m"
+    },
+    {
+        "author_no": "108",
+        "author_name": "Leo Tolstoy",
+        "university": "Moscow University",
+        "date_of_birth": "1899-11-12",
+        "h_index": 300,
+        "gender": "m"
+    },
+    {
+        "author_no": "109",
+        "author_name": "Paulo Coelho",
+        "university": "Lisbon University",
+        "date_of_birth": "1944-01-19",
+        "h_index": 244,
+        "gender": "f"
+    },
+    {
+        "author_no": "110",
+        "author_name": "ColinDuncan",
+        "university": "Maastricht University",
+        "date_of_birth": "1982-01-01",
         "h_index": 300,
         "gender": "m"
     },
@@ -18,6 +88,30 @@
     {
         "author_no": "112",
         "author_name": "Harper Lee",
+        "university": "Princeton Universit",
+        "date_of_birth": "1926-01-19",
+        "h_index": 244,
+        "gender": "f"
+    },
+    {
+        "author_no": "113",
+        "author_name": "Unmesh Vrije",
+        "university": "Maastricht University",
+        "date_of_birth": "1952-01-01",
+        "h_index": 300,
+        "gender": "m"
+    },
+    {
+        "author_no": "114",
+        "author_name": "Andrej Gajduk",
+        "university": "Princeton University",
+        "date_of_birth": "1899-11-12",
+        "h_index": 300,
+        "gender": "m"
+    },
+    {
+        "author_no": "115",
+        "author_name": "Dan Brown",
         "university": "Princeton Universit",
         "date_of_birth": "1926-01-19",
         "h_index": 244,

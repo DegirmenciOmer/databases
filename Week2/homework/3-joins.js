@@ -3,7 +3,7 @@ const connection = mysql.createConnection({
 host: 'localhost',
     user: 'hyfuser',
     password: 'hyfpassword',
-    database: 'userdb'
+    database: 'week2_db'
 });
 connection.connect();
 
@@ -14,18 +14,18 @@ function mysqlConnection(queryName) {
     });
 }
 
-const query1 =
+const authors_collaborators =
     `SELECT 
     a.author_no, a.author_name, c.author_name AS Collaborator
 FROM authors a
 JOIN authors c
     ON a.collaborator = c.author_no;`;
 
-mysqlConnection(query1);
+mysqlConnection(authors_collaborators);
 
 
-const query2 =
-    `
+const authors_paper_titles =
+`
 SELECT 
     a.author_no, a.author_name, a.university, a.h_index, a.gender, a.Collaborator, rp.paper_title
 FROM authors a
@@ -35,4 +35,4 @@ LEFT JOIN research_papers rp
     ON rp.paper_id = ap.paper_id;
 `;
 
-mysqlConnection(query2);
+mysqlConnection(authors_paper_titles);
