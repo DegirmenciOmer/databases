@@ -35,7 +35,7 @@ async function createAuthorsAndPapersTable() {
     CREATE TABLE IF NOT EXISTS authors_and_papers(
     author_no INT,
     paper_id INT,
-    PRIMARY KEY(author_no,paper_id),
+    PRIMARY KEY(author_no, paper_id),
     FOREIGN KEY(author_no) REFERENCES authors(author_no),
     FOREIGN KEY(paper_id) REFERENCES research_papers(paper_id)
     );
@@ -49,26 +49,8 @@ async function createAuthorsAndPapersTable() {
         const authPaperData = await readFile(__dirname + '/files/authors_papers.json', 'utf8');
         const authors_and_papers = JSON.parse(authPaperData);
 
-
-        // for (let i = 0; i < research_papers_TABLE.length; i++) {
-        //     connection.query('INSERT INTO research_papers SET ?', researchPapers[i], error => {
-        //         if (error) {
-        //             throw error;
-        //         }
-        //     });
-        // }
         const paperPromises = researchPapers.map(paper => executeQuery('INSERT INTO research_papers SET ?', paper));
         const authors_and_papersPromises = authors_and_papers.map(auth_pap => executeQuery('INSERT INTO authors_and_papers SET ?', auth_pap));
-
-
-        // for (let i = 0; i < authors_and_papers_TABLE.length; i++) {
-        //     connection.query('INSERT INTO authors_and_papers SET ?', authors_papers[i], error => {
-        //         if (error) {
-        //             throw error;
-        //         }
-        //     });
-        // }
-
 
         Promise.all(paperPromises, authors_and_papersPromises);
         connection.end();
