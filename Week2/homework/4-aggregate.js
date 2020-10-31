@@ -10,7 +10,7 @@ connection.connect();
 function queryConnection(queryName) {
     connection.query(queryName, (err, results, fields) => {
         if (err) throw err;
-        console.log(results);
+        console.table(results);
     });
 }
 
@@ -32,9 +32,9 @@ queryConnection(query1);
 const query2 = 
 `
 SELECT 
-    count(ap.paper_id) AS total_paper_by_females
+    a.gender, count(ap.paper_id) AS total_paper_by_females
 FROM authors a
-JOIN authors_and_papers ap
+LEFT JOIN authors_and_papers ap
 USING(author_no)
 WHERE a.gender = 'f';
 `;

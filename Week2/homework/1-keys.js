@@ -47,17 +47,16 @@ async function alterAuthTable() {
     connection.connect();
 
     try {
-        await Promise.all[executeQuery(CREATE_DB), executeQuery(USE_DB), executeQuery(CREATE_AUTHORS_TABLE)];
+        await Promise.all[executeQuery(CREATE_DB), executeQuery(USE_DB), executeQuery(CREATE_AUTHORS_TABLE),  executeQuery(ADD_COLUMN_TO_AUTHORS_TABLE)];
 
         const data = await readFile(__dirname + '/files/authors.json', 'utf8');
+
         const authors = JSON.parse(data);
 
         const promises = authors.map(author => executeQuery('INSERT INTO authors SET ?', author));
+        await executeQuery(ADD_FK_TO_AUTHORS_TABLE);
         Promise.all(promises);
-
-
-        await Promise.all[executeQuery(CREATE_AUTHORS_TABLE), executeQuery(ADD_COLUMN_TO_AUTHORS_TABLE),
-            executeQuery(ADD_FK_TO_AUTHORS_TABLE)];
+        
         connection.end();
 
     } catch (err) {
