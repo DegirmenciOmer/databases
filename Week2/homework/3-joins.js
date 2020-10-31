@@ -29,7 +29,7 @@ const authors_paper_titles =
 SELECT 
     a.author_no, a.author_name, a.university, a.h_index, a.gender, a.Collaborator, rp.paper_title
 FROM authors a
-LEFT JOIN authors_papers ap
+LEFT JOIN authors_and_papers ap
 	USING(author_no)
 LEFT JOIN research_papers rp
     ON rp.paper_id = ap.paper_id;

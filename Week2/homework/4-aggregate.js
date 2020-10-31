@@ -19,7 +19,7 @@ const query1 =
 SELECT 
     rp.paper_title, count(a.author_no) AS total_author
 FROM research_papers rp
-JOIN authors_papers ap
+JOIN authors_and_papers ap
     USING(paper_id)
 JOIN authors a
     USING(author_no)
@@ -34,7 +34,7 @@ const query2 =
 SELECT 
     count(ap.paper_id) AS total_paper_by_females
 FROM authors a
-JOIN authors_papers ap
+JOIN authors_and_papers ap
 USING(author_no)
 WHERE a.gender = 'f';
 `;
@@ -55,7 +55,7 @@ const query4 =
 SELECT 
 a. university, count(ap.paper_id) AS total_papers_per_uni
 FROM authors a
-JOIN authors_papers ap
+JOIN authors_and_papers ap
     USING(author_no)
 JOIN research_papers rp
 	USING(paper_id)
@@ -69,7 +69,7 @@ const query5 =
 SELECT 
 a. university, min(a.h_index) AS min_h_index, max(a.h_index) AS max_h_index
 FROM authors a
-JOIN authors_papers ap
+JOIN authors_and_papers ap
     USING(author_no)
 JOIN research_papers rp
 	ON rp.paper_id = ap.paper_id
