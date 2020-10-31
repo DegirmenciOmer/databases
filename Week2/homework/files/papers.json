@@ -1,150 +1,180 @@
 [
     {
+        "paper_id": 1,
         "paper_title": "Addiction",
         "conference": "Amsterdam",
         "publish_date": "2020-08-09"
     },
     {
+        "paper_id": 2,
         "paper_title": "Advocacyt",
         "conference": "Den Bosch",
         "publish_date": "2010-08-09"
     },
     {
+        "paper_id": 3,
         "paper_title": "Borderlines",
         "conference": "Paris",
         "publish_date": "2016-12-11"
     },
     {
+        "paper_id": 4,
         "paper_title": "Autobiography",
         "conference": "Den Bosch",
         "publish_date": "2020-08-09"
     },
     {
+        "paper_id": 5,
         "paper_title": "Depression",
         "conference": "Moscow",
         "publish_date": "2016-12-11"
     },
     {
+        "paper_id": 6,
         "paper_title": "Dialectic",
         "conference": "Amsterdam",
         "publish_date": "2010-04-07"
     },
     {
+        "paper_id": 7,
         "paper_title": "Ethnocentrism",
         "conference": "Den Bosch",
         "publish_date": "2020-08-09"
     },
     {
+        "paper_id": 8,
         "paper_title": "Point Of View",
         "conference": "Moscow",
         "publish_date": "2010-04-07"
     },
     {
+        "paper_id": 9,
         "paper_title": "Homophobia",
         "conference": "Moscow",
         "publish_date": "2010-08-09"
     },
     {
+        "paper_id": 10,
         "paper_title": "Influence",
         "conference": "Den Bosch",
         "publish_date": "2020-08-09"
     },
     {
+        "paper_id": 11,
         "paper_title": "Initiation",
         "conference": "Amsterdam",
         "publish_date": "2016-12-11"
     },
     {
+        "paper_id": 123,
         "paper_title": "Jealousy",
         "conference": "Moscow",
         "publish_date": "2010-08-09"
     },
     {
+        "paper_id": 13,
         "paper_title": "Madwomen",
         "conference": "Den Bosch",
         "publish_date": "2010-04-07"
     },
     {
+        "paper_id": 14,
         "paper_title": "Nationalism",
         "conference": "Amsterdam",
         "publish_date": "2020-08-09"
     },
     {
+        "paper_id": 15,
         "paper_title": "Objectification",
         "conference": "Moscow",
         "publish_date": "2016-12-11"
     },
     {
+        "paper_id": 16,
         "paper_title": "Problematics",
         "conference": "Den Bosch",
         "publish_date": "2010-04-07"
     },
     {
+        "paper_id": 17,
         "paper_title": "Seduction",
         "conference": "Amsterdam",
         "publish_date": "2020-08-09"
     },
     {
+        "paper_id": 18,
         "paper_title": "Silence",
         "conference": "Amsterdam",
         "publish_date": "2016-12-11"
     },
     {
+        "paper_id": 19,
         "paper_title": "Transgression",
         "conference": "Amsterdam",
         "publish_date": "2010-04-07"
     },
     {
+        "paper_id": 20,
         "paper_title": "Violence",
         "conference": "Paris",
         "publish_date": "2020-08-09"
     },
     {
+        "paper_id": 21,
         "paper_title": "Verbiage",
         "conference": "Paris",
         "publish_date": "2010-04-07"
     },
     {
+        "paper_id": 22,
         "paper_title": "Womanhood",
         "conference": "Paris",
         "publish_date": "2016-12-11"
     },
     {
+        "paper_id": 23,
         "paper_title": "Xenon",
         "conference": "Amsterdam",
         "publish_date": "2020-08-09"
     },
     {
+        "paper_id": 24,
         "paper_title": "Zircon",
         "conference": "Den Bosch",
         "publish_date": "2010-04-07"
     },
     {
+        "paper_id": 25,
         "paper_title": "Vision",
         "conference": "Moscow",
         "publish_date": "2010-08-09"
     },
     {
+        "paper_id": 26,
         "paper_title": "Statue",
         "conference": "Moscow",
         "publish_date": "2016-12-11"
     },
     {
+        "paper_id": 27,
         "paper_title": "Spirit",
         "conference": "Paris",
         "publish_date": "2010-04-07"
     },
     {
+        "paper_id": 28,
         "paper_title": "Textuality",
         "conference": "Amsterdam",
         "publish_date": "2010-04-07"
     },
     {
+        "paper_id": 29,
         "paper_title": "Pleasure",
         "conference": "Amsterdam",
         "publish_date": "2020-08-09"
     },
     {
+        "paper_id": 30,
         "paper_title": "Politics",
         "conference": "Paris",
         "publish_date": "2016-12-11"
