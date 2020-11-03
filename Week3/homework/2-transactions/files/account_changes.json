@@ -1,0 +1,20 @@
+[
+    {
+        "account_number": 103,
+        "amount": 50,
+        "changed_date": "2020-08-08",
+        "remark": "Jumbo boodschappen"
+    },
+    {
+        "account_number": 101,
+        "amount": 111,
+        "changed_date": "2020-09-08",
+        "remark": "LIDL groente"
+    },
+    {
+        "account_number": 105,
+        "amount": 388,
+        "changed_date": "2020-10-12",
+        "remark": "Action fietstas"
+    }
+]
