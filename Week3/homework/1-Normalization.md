@@ -18,7 +18,7 @@
 Each table cell should contains a single value.
 Each record needs to be unique.
 
-This table above is not in first normal form because the [food_code] and [food_description] columns contain multiple values. 
+This table above is not in first normal form because the [food_code] and [food_description] columns contain multiple values.
 
 +-----------+---------------+----------------+-----------+-------------+------------+-------------------+-----------+------------------+
 | member_id | member_name   | member_address | dinner_id | dinner_date | venue_code | venue_description | food_code | food_description |
@@ -52,40 +52,41 @@ Super Keys      : member_id,    member_name,    member_address,     dinner_id,  
 
 Candidate Keys  : member_id,    dinner_id,      food_code
 
-Primary Keys    : member_id + food_code (composite key). 
+Primary Keys    : member_id + food_code + dinner_id (composite key).
 
 
 3. How can you develop the set of 2NF tables? (Think of relationships between different tables).
 Rule 1- Be in 1NF
 Rule 2- Single Column Primary Key
 
-AS member_name and member_address are dependent on member_id we must create a new table. 
-in this table member_id is our primary key.
+AS member_name and member_address are dependent on member_id we must create a new table.
+Table 1: member_id(pk) | member_name | member_address
+
 
 food_description is dependent on food_code but not on member_name. Thats why we need to create a separate table as well.
-in this table food_code is our primary key.
+Table 2: food_code(pk) | food_description
 
-We need to create a third table containing the remaining columns: dinner_id, dinner_date, venue_code, venue_description  
-We need to set  member_id and food_code as composite key since we can select each only this way. 
+<!-- We need to create a third table containing the remaining columns: dinner_id, dinner_date, venue_code, venue_description
+We need to set  member_id and food_code as composite key since we can select each only this way. -->
+
+Our third table could be set to describe dinner:
+Table 3: dinner_id(pk) | dinner_date | venue_code(fk)
+
+venue_code represents the venue_description:
+Table 4: venue_code(pk)| venue_description
+
+To check who had whch food at which dinner:
+Table 5: member_id(pk) | dinner_id | food_code(fk)
+
+One last table could be shaped as:
+Table 6: dinner_id(pk) | member_id
+
+
 
 
 4. How can you develop the set of 3NF tables?
 Rule 1- Be in 2NF
 Rule 2- Has no transitive functional dependencies
-To move our 2NF table into 3NF, we again need to divide our tables:
 
-
-member_id(pk) | food_code
-
-member_id(pk) | member_name   | member_address
-
-food_code(pk) | food_description
-
-dinner_id(pk) | dinner_date | venue_code
-
-venue_code(pk)| venue_description
-
-dinner_id(pk) | member_id
-
-
-
+Actually it could be deduced that the set of 2NF tables provides us with 3NF
+```
